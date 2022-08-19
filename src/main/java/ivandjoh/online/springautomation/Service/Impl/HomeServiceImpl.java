@@ -12,7 +12,6 @@ public class HomeServiceImpl implements HomeService {
     @Override
     public ResponseEntity getHomeService() {
 
-
         return ResponseUtils.getResponse("success", HttpStatus.OK.value(), "Hello World!");
     }
 }
