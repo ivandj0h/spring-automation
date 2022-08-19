@@ -1,0 +1,22 @@
+package ivandjoh.online.springautomation.Controller;
+
+import ivandjoh.online.springautomation.Dto.HttpResponse.HomeResponse;
+import ivandjoh.online.springautomation.Service.HomeService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/api/v1")
+public class HomeController {
+
+    @Autowired
+    private HomeService homeService;
+
+    @GetMapping("/")
+    public ResponseEntity<HomeResponse> getHome() {
+        return homeService.getHomeService();
+    }
+}
